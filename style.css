@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    font-family: "Poppins", sans-serif;
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./image/bg.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: 85%;
+    height: 85vh;
+    backdrop-filter: blur(8px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: inset 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+#main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent 60%, rgb(4, 61, 42));
+    z-index: 1;
+}
+
+.pd {
+    padding: 20px 50px;
+}
+
+h2 {
+    font-size: 4rem;
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+}
+
+h3 {
+
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #00FF26;
+    text-transform: capitalize;
+
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: rgb(233, 233, 233);
+}
+
+a {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+header .nav-item {
+    padding-inline: 20px;
+    position: relative;
+    transition: 0.3s;
+    z-index: 2;
+
+}
+
+.nav-item::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -10px;
+    left: 21px;
+    width: 72%;
+    height: 2px;
+    background-color: white;
+    box-shadow: 0 0 5px white;
+    transform: scale(0);
+    transform-origin: left;
+    transition: 0.3s;
+}
+
+.nav-item:hover::after {
+    transform: scale(1);
+}
+
+#home:hover::after {
+    width: 58%;
+    background-color: #00ff26;
+    box-shadow: 0 0 5px #00ff26;
+}
+
+#blog:hover::after {
+    width: 55%;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.hero-content h3 {
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 50px;
+}
+
+.hero-content h1 {
+    font-size: 6rem;
+    font-weight: 800;
+    letter-spacing: 30px;
+    text-transform: uppercase;
+    margin-top: -10px;
+
+}
+
+.hero-content img {
+    width: 47%;
+    margin-top: -150px;
+    object-fit: cover;
+    animation: identifier 100s linear infinite;
+}
+
+@keyframes identifier {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#join {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50px;
+    height: 50px;
+    width: 250px;
+    margin-top: -180px;
+    z-index: 2;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+}
+
+#join:hover {
+    background-color: white;
+    color: black;
+}
+
+#new {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.about {
+    width: 60%;
+    align-items: center;
+}
+
+.imgpart {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+button {
+    font-size: 18px;
+    color: black;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    height: 45px;
+    width: 200px;
+    background-color: rgb(0, 255, 38);
+    cursor: pointer;
+    margin-top: 40px;
+    border-radius: 25px;
+    transition: 0.3s;
+
+}
+
+button:hover {
+    background-color: #00D11F;
+}
+
+#tnew {
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.join {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 90px 0;
+    gap: 30px;
+
+
+}
+
+#info {
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    height: 45px;
+    width: 50%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: white;
+    border-image: initial;
+    border-radius: 50px;
+    padding: 0px 30px;
+
+}
+
+input::placeholder {
+    color: white;
+    opacity: 1;
+}
+
+input:focus {
+    outline: none;
+}
+
+.checkbox {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 18px;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 8px;
+    padding-top: 30px;
+    column-gap: 50px;
+}
+
+footer div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+footer h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    color: white;
+}
+
+footer div a {
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    color: rgb(204, 204, 204);
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+footer div a:hover {
+    color: rgb(241, 241, 241);
+    text-shadow: 0 0 10px white;
+}
+
+#last main {
+    height: auto;
+}
+
+.ankit {
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    color: rgb(202, 202, 202);
+    text-align: center;
+    padding: 15px;
+    transition: 0.3s;
+}
+.ankit:hover{
+    color: rgb(241, 241, 241);
+    text-shadow: 0 0 10px white;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+#last {
+    align-items: start;
+    height: auto;
+    padding: 65px 0;
+}
